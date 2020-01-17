@@ -21,31 +21,36 @@ print(eleventh)
 some_numbers <- all_numbers[2:5]
 print(some_numbers)
 
-
 # Create a vector `even` that holds the even numbers from 1 to 100
-
+even <- seq(2, 100, 2)
 
 # Using the `all()` function and `%%` (modulo) operator, confirm that all of the
 # numbers in your `even` vector are even
-
+print(all(even%%2==0))
 
 
 # Create a vector `phone_numbers` that contains the numbers 8, 6, 7, 5, 3, 0, 9
-
+phone_number <- c(8,6,7,5,3,0,9)
+print(phone_number)
 
 # Create a vector `prefix` that has the first three elements of `phone_numbers`
-
+prefix <- phone_number[1:3]
+print(prefix)
 
 # Create a vector `small` that has the values of `phone_numbers` that are 
 # less than or equal to 5
-
+small <- phone_number[phone_number<=5]
+print(small)
 
 # Create a vector `large` that has the values of `phone_numbers` that are 
 # strictly greater than 5
-
+large <- phone_number[phone_number>5]
+print(large)
 
 # Replace the values in `phone_numbers` that are larger than 5 with the number 5
-
+phone_number[phone_number>5] <- 5
+print(phone_number)
 
 # Replace every odd-numbered value in `phone_numbers` with the number 0
-
+phone_number[phone_number%%2==1] <- 0
+print(phone_number)
