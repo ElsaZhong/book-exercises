@@ -9,17 +9,23 @@ library(fueleconomy)
 
 # Install and load the "dplyr" library
 
+#name <- c("Ada", "Bob", "Chris")
+#heights <- c(165, 157, 170)
+#people <- data.frame(name, heights, stringsAsFactors = FALSE)
+#library("dplyr")
 
 # Select the different manufacturers (makes) of the cars in this data set. 
 # Save this vector in a variable
-
+select(people, name)
 
 # Use the `distinct()` function to determine how many different car manufacturers
 # are represented by the data set
 
 
 # Filter the data set for vehicles manufactured in 1997
-
+filter(people, heights> 160)
+people <- mutate(people, age = 3)
+summarize(people, max_height = max(heights), count = n(), total_height = sum(heights))
 
 # Arrange the 1997 cars by highway (`hwy`) gas milage
 
